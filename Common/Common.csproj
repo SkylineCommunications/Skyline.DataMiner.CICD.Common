@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Skyline.DataMiner.CICD.Common</AssemblyName>
+        <RootNamespace>Skyline.DataMiner.CICD.Common</RootNamespace>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <Authors>SkylineCommunications</Authors>
+        <Company>Skyline Communications</Company>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageProjectUrl>https://skyline.be/</PackageProjectUrl>
+        <PackageTags>Skyline;DataMiner;CICD</PackageTags>
+        <Description>Library providing common methods used by all DataMiner CICD Re-Usable Modules.</Description>
+	    <PackageReadmeFile>README.md</PackageReadmeFile>
+	    <RepositoryUrl>https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Loggers</RepositoryUrl>
+	    <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+	    <None Include="..\README.md">
+		    <Pack>True</Pack>
+		    <PackagePath>\</PackagePath>
+	    </None>
+        <None Include="..\_NuGetItems\icon.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\_NuGetItems\LICENSE.txt">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="Skyline.DataMiner.CICD.Models.Protocol" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NuGet.Frameworks" Version="6.7.0" />
+      <PackageReference Include="NuGet.Protocol" Version="6.7.0" />
+    </ItemGroup>
+
+</Project>
