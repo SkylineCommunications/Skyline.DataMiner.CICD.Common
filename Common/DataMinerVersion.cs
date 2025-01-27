@@ -351,7 +351,7 @@
         /// Spaces are removed, expected format: X.X.X.X or X.X.X.X-X.
         /// </summary>
         /// <returns>The String representation of this <see cref="DataMinerVersion"/> object.</returns>
-        internal string ToStrictString()
+        public string ToStrictString()
         {
             return Iteration > 0
                 ? $"{Version}-{Iteration}"
