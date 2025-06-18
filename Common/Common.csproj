@@ -17,6 +17,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Loggers</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
