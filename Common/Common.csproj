@@ -15,7 +15,7 @@
     <PackageTags>Skyline;DataMiner;CICD</PackageTags>
     <Description>Library providing common methods used by all DataMiner CICD Re-Usable Modules.</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Loggers</RepositoryUrl>
+    <RepositoryUrl>https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Common</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
