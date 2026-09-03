@@ -89,8 +89,9 @@
         /// Retrieves the latest revision of the DevPack packages for the specified DataMiner version.
         /// </summary>
         /// <param name="versionToCheck">The DataMiner version.</param>
+        /// <param name="cancellationToken">The cancellation token.</param>
         /// <returns>The latest revision of the DevPack packages for the specified DataMiner version.</returns>
-        public static async Task<string> GetLatestRevisionOfDevPackAsync(DataMinerVersion versionToCheck)
+        public static async Task<string> GetLatestRevisionOfDevPackAsync(DataMinerVersion versionToCheck, CancellationToken cancellationToken)
         {
             if (latestRevisionOfDevPack != null && DateTime.Now - retrievalTime < CacheDuration)
             {
@@ -98,7 +99,6 @@
             }
 
             ILogger logger = NullLogger.Instance;
-            CancellationToken cancellationToken = CancellationToken.None;
 
             int maxRevisionNumberFound = -1;
 
@@ -146,6 +146,16 @@
             retrievalTime = DateTime.Now;
 
             return latestRevisionOfDevPack;
+        }
+
+        /// <summary>
+        /// Retrieves the latest revision of the DevPack packages for the specified DataMiner version.
+        /// </summary>
+        /// <param name="versionToCheck">The DataMiner version.</param>
+        /// <returns>The latest revision of the DevPack packages for the specified DataMiner version.</returns>
+        public static async Task<string> GetLatestRevisionOfDevPackAsync(DataMinerVersion versionToCheck)
+        {
+            return await GetLatestRevisionOfDevPackAsync(versionToCheck, CancellationToken.None);
         }
     }
 }
